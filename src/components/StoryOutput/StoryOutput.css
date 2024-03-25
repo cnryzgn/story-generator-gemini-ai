@@ -1,0 +1,101 @@
+.story-output__container {
+    width: 95%;
+    max-width: 1200px;
+    margin: 20px auto 70px auto;
+    padding: 50px 30px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 0 1px #111, 4px 4px 1px #deb887;
+    position: relative;
+}
+
+.story-output__container h1::selection,
+.story-output__container p::selection {
+    background-color: #deb887;
+    color: #fff;
+    text-shadow: 0 0 2px #111;
+}
+
+.story-output__container h1 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: 900;
+    color: #333;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
+.story-output__container p {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 3vh;
+    font-weight: 600;
+    color: #666;
+}
+
+.story-output__container p::first-letter::selection {
+    background-color: #deb887;
+    color: #fff;
+    text-shadow: 0 0 2px #111;  
+}
+
+.story-output__container p::first-letter {
+    padding-left: 15px;
+    font-size: 1.5rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.story-output__container .top-side {
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.story-output__container .top-side #copy-button {
+    padding: 10px;
+    background-color: #666;
+    color: #ccc;
+    cursor: pointer;
+    margin-top: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+    transition: .250s;
+    border: 1px solid transparent;
+    outline: none;
+}
+
+.story-output__container .top-side #copy-button:hover {
+    background-color: #deb887;
+    color: #333;
+}
+
+.story-output__container .top-side span {
+    position: absolute;
+    top: -1px;
+    padding: 10px;
+    user-select: none;
+    background-color: #deb887;
+    display: none;
+    color: #fff;
+    text-shadow: 2px 2px 1px #111;
+    font-family: Arial, Helvetica, sans-serif;
+    animation: opening .2s linear forwards;
+}
+
+
+/* .open-copy-button-tooltip {
+    animation: opening 1.5s linear reverse !important;
+} */
+
+@keyframes opening {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
